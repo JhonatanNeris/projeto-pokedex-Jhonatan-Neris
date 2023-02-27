@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+    /*background: linear-gradient(90deg, rgba(65, 185, 131, 1)0%, rgba(0, 212, 255, 1)100%);*/
+    background: url(../pokedex/body_bg.png);
+}
+.main{
+    background-color: rgb(0, 0, 0);
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 25px 2%;
+}
+.main h2 {
+    text-align: center;
+    color: #feca1b;
+    font-size: 45px;
+}
+.qtd-pokemons{
+    max-width: 1100px;
+    background: #000000;
+    margin: 0px auto;
+    padding: 20px 0px;
+    align-items: center;
+    text-align: center;
+}
+.qtd-pokemons input[type=number]{
+    padding: 8px 10px;
+    width: 760px;
+    background: #525252;
+    color: white;
+    border: none;
+}
+.search{
+    max-width: 1100px;
+    background: #000000;
+    margin: 0px auto;    
+    position: relative;
+    padding-bottom: 20px;    
+}
+.search-bar{
+    width: 760px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+.search-bar input{
+    padding: 8px 40px 8px 10px;
+    background: #525252;
+    color: white;
+    border: none;
+    width: 100%;
+    
+}
+.search-bar i{
+    position: absolute;
+    right: 15px;
+    bottom: 8px;
+    color: rgb(180, 175, 175);
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    max-width: 1100px;
+    margin: 0px auto 50px auto;
+    gap: 30px 80px;
+    justify-content: center;
+    background: #000000;
+    padding: 50px 0px;
+}
+.pokemon-card{
+    width: 200px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    font-weight: 500;
+    background: #525252; 
+    color: white;
+    overflow: hidden;
+    transition: .5s;
+    
+}
+.pokemon-card p{
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.pokemon-card img{
+    width: 100%;         
+    margin-bottom: 5px;
+
+}
+.pokemon-card .info{        
+    height: 100px;
+    display: flex;       
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1px 15px;
+    font-size: 15px;
+    background-color: #232323;    
+}
+.pokemon-card .info span{
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.cards:has(.pokemon-card:hover) .pokemon-card:not(:hover){
+    opacity: .6;
+    scale: .98;
+}
+.type{
+    background-color: rgb(160, 161, 160);
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: #232323;
+}
+.typeGrass{
+    background-color: #9bcc50 ;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.typeFire{
+    background-color: rgb(224, 101, 44);
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.typeWater{
+    background-color: #51c4e7 ;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.typeBug{
+    background-color: yellow;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.typePoison{
+    background-color: rgb(221, 46, 221);
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.typeElectric{
+    background-color: #eed535 ;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.typeGround{
+    background-color: rgb(139, 50, 50) ;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+@media screen and (max-width:768px) {
+    .cards{display: flex; flex-wrap: wrap; margin: 10%;}
+    .pokemon-card{width: 100%; height: 100%; margin:30px;}
+    .pokemon-card img{width: 250px;}
+    .search-bar{width: 80%;}
+    .qtd-pokemons input[type=number]{width: 80%;}
+    
+}
